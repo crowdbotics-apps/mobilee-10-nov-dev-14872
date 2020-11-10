@@ -28,6 +28,7 @@ export default class Blank extends React.Component {
   render = () => (
     <View>
       <Switch
+        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
         style={styles.Switch_2}
         value={this.state.Switch_2}
         onValueChange={nextChecked => this.setState({ Switch_2: nextChecked })}
@@ -38,6 +39,12 @@ export default class Blank extends React.Component {
         onPress={nextChecked => this.setState({ CheckBox_3: nextChecked })}
       />
       <Text>Sample text content</Text>
+      <Image
+        source={{
+          uri:
+            "https://crowdbotics-slack-dev.s3.amazonaws.com/media/project_component_resources/8_jSWaM5c.jpg"
+        }}
+      />
     </View>
   )
 }
@@ -55,5 +62,10 @@ const styles = StyleSheet.create({
   View_1: {},
   Switch_2: { alignSelf: "flex-start" },
   CheckBox_3: {},
-  Text_4: {}
+  Text_4: {},
+  View_1: {},
+  Switch_2: { alignSelf: "flex-start" },
+  CheckBox_3: {},
+  Text_4: {},
+  Image_5: {}
 })
