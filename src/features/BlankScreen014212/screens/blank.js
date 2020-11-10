@@ -23,9 +23,23 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = {}
+  state = { Switch_2: true, CheckBox_3: true }
 
-  render = () => <View />
+  render = () => (
+    <View>
+      <Switch
+        style={styles.Switch_2}
+        value={this.state.Switch_2}
+        onValueChange={nextChecked => this.setState({ Switch_2: nextChecked })}
+      />
+      <CheckBox
+        title="Checkbox"
+        checked={this.state.CheckBox_3}
+        onPress={nextChecked => this.setState({ CheckBox_3: nextChecked })}
+      />
+      <Text>Sample text content</Text>
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -37,5 +51,9 @@ const styles = StyleSheet.create({
   View_1: {},
   Switch_2: { alignSelf: "flex-start" },
   CheckBox_3: {},
-  View_1: {}
+  View_1: {},
+  View_1: {},
+  Switch_2: { alignSelf: "flex-start" },
+  CheckBox_3: {},
+  Text_4: {}
 })
