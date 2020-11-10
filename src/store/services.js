@@ -1,4 +1,9 @@
 import axios from "axios"
+const plugin = axios.create({
+  baseURL:
+    "https://crowdbotics-slack-dev.herokuapp.com/dashboard/app/7307/storyboard/8491/",
+  headers: { Accept: "application/json", "Content-Type": "application/json" }
+})
 const mobileenovAPI = axios.create({
   baseURL: "https://mobilee-10-nov-dev-14872.botics.co/",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
@@ -18,6 +23,28 @@ function api_v1_customtext_partial_update(action) {
   return mobileenovAPI.patch(`/api/v1/customtext/${action.id}/`, null, {
     data: action.data
   })
+}
+function api_v1_gfghjrty_list(action) {
+  return mobileenovAPI.get(`/api/v1/gfghjrty/`)
+}
+function api_v1_gfghjrty_create(action) {
+  return mobileenovAPI.post(`/api/v1/gfghjrty/`, null, { data: action.data })
+}
+function api_v1_gfghjrty_read(action) {
+  return mobileenovAPI.get(`/api/v1/gfghjrty/${action.id}/`)
+}
+function api_v1_gfghjrty_update(action) {
+  return mobileenovAPI.put(`/api/v1/gfghjrty/${action.id}/`, null, {
+    data: action.data
+  })
+}
+function api_v1_gfghjrty_partial_update(action) {
+  return mobileenovAPI.patch(`/api/v1/gfghjrty/${action.id}/`, null, {
+    data: action.data
+  })
+}
+function api_v1_gfghjrty_delete(action) {
+  return mobileenovAPI.delete(`/api/v1/gfghjrty/${action.id}/`)
 }
 function api_v1_homepage_list(action) {
   return mobileenovAPI.get(`/api/v1/homepage/`)
@@ -89,6 +116,12 @@ export const apiService = {
   api_v1_customtext_read,
   api_v1_customtext_update,
   api_v1_customtext_partial_update,
+  api_v1_gfghjrty_list,
+  api_v1_gfghjrty_create,
+  api_v1_gfghjrty_read,
+  api_v1_gfghjrty_update,
+  api_v1_gfghjrty_partial_update,
+  api_v1_gfghjrty_delete,
   api_v1_homepage_list,
   api_v1_homepage_read,
   api_v1_homepage_update,

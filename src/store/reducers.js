@@ -28,6 +28,42 @@ export default function apiReducer(state = initialState, action) {
       return Object.assign({}, state, {
         mobileenovAPI: [...state.mobileenovAPI, action.response]
       })
+    case types.API_V1_GFGHJRTY_LIST:
+    case types.API_V1_GFGHJRTY_LIST_SUCCEEDED:
+    case types.API_V1_GFGHJRTY_LIST_FAILED:
+      return Object.assign({}, state, {
+        mobileenovAPI: [...state.mobileenovAPI, action.response]
+      })
+    case types.API_V1_GFGHJRTY_CREATE:
+    case types.API_V1_GFGHJRTY_CREATE_SUCCEEDED:
+    case types.API_V1_GFGHJRTY_CREATE_FAILED:
+      return Object.assign({}, state, {
+        mobileenovAPI: [...state.mobileenovAPI, action.response]
+      })
+    case types.API_V1_GFGHJRTY_READ:
+    case types.API_V1_GFGHJRTY_READ_SUCCEEDED:
+    case types.API_V1_GFGHJRTY_READ_FAILED:
+      return Object.assign({}, state, {
+        mobileenovAPI: [...state.mobileenovAPI, action.response]
+      })
+    case types.API_V1_GFGHJRTY_UPDATE:
+    case types.API_V1_GFGHJRTY_UPDATE_SUCCEEDED:
+    case types.API_V1_GFGHJRTY_UPDATE_FAILED:
+      return Object.assign({}, state, {
+        mobileenovAPI: [...state.mobileenovAPI, action.response]
+      })
+    case types.API_V1_GFGHJRTY_PARTIAL_UPDATE:
+    case types.API_V1_GFGHJRTY_PARTIAL_UPDATE_SUCCEEDED:
+    case types.API_V1_GFGHJRTY_PARTIAL_UPDATE_FAILED:
+      return Object.assign({}, state, {
+        mobileenovAPI: [...state.mobileenovAPI, action.response]
+      })
+    case types.API_V1_GFGHJRTY_DELETE:
+    case types.API_V1_GFGHJRTY_DELETE_SUCCEEDED:
+    case types.API_V1_GFGHJRTY_DELETE_FAILED:
+      return Object.assign({}, state, {
+        mobileenovAPI: [...state.mobileenovAPI, action.response]
+      })
     case types.API_V1_HOMEPAGE_LIST:
     case types.API_V1_HOMEPAGE_LIST_SUCCEEDED:
     case types.API_V1_HOMEPAGE_LIST_FAILED:
