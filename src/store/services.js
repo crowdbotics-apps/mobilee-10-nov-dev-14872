@@ -1,4 +1,8 @@
 import axios from "axios"
+const newConnectornbvnbv = axios.create({
+  baseURL: "https://bnvnvmv.jghfjg",
+  headers: { Accept: "application/json", "Content-Type": "application/json" }
+})
 const plugin = axios.create({
   baseURL:
     "https://crowdbotics-slack-dev.herokuapp.com/dashboard/app/7307/storyboard/8491/",
