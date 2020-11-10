@@ -23,12 +23,11 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = { Switch_2: true, CheckBox_3: true }
+  state = { Switch_2: true, CheckBox_3: true, Switch_6: true, TextInput_7: "" }
 
   render = () => (
     <View>
       <Switch
-        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
         style={styles.Switch_2}
         value={this.state.Switch_2}
         onValueChange={nextChecked => this.setState({ Switch_2: nextChecked })}
@@ -39,11 +38,16 @@ export default class Blank extends React.Component {
         onPress={nextChecked => this.setState({ CheckBox_3: nextChecked })}
       />
       <Text>Sample text content</Text>
-      <Image
-        source={{
-          uri:
-            "https://crowdbotics-slack-dev.s3.amazonaws.com/media/project_component_resources/8_jSWaM5c.jpg"
-        }}
+      <Switch
+        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
+        style={styles.Switch_6}
+        value={this.state.Switch_6}
+        onValueChange={nextChecked => this.setState({ Switch_6: nextChecked })}
+      />
+      <TextInput
+        placeholder="Sample text input placeholder"
+        value={this.state.TextInput_7}
+        onChangeText={nextValue => this.setState({ TextInput_7: nextValue })}
       />
     </View>
   )
@@ -67,5 +71,11 @@ const styles = StyleSheet.create({
   Switch_2: { alignSelf: "flex-start" },
   CheckBox_3: {},
   Text_4: {},
-  Image_5: {}
+  Image_5: {},
+  View_1: {},
+  Switch_2: { alignSelf: "flex-start" },
+  CheckBox_3: {},
+  Text_4: {},
+  Switch_6: { alignSelf: "flex-start" },
+  TextInput_7: {}
 })
